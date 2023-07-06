@@ -9,7 +9,7 @@ import java.time.Month;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "api/student")
+@RequestMapping(path = "api/students")
 
 public class StudentController {
 
@@ -22,7 +22,7 @@ public class StudentController {
 
     @GetMapping
     public List<Student> getStudent() {
-        return studentService.getStudent();
+        return studentService.getStudents();
     }
     @PostMapping("/add")@ResponseStatus(HttpStatus.CREATED)
     public void registerNewStudent(@RequestBody Student student ){
